@@ -109,7 +109,7 @@ Tooltip.propTypes = {
   /** Function to close the tooltip. */
   close: PropTypes.func.isRequired,
   /** The direction to align the tooltip. */
-  align: PropTypes.oneOf(['Right, Left, Up, Down']).isRequired,
+  align: PropTypes.oneOf(['Right', 'Left', 'Up', 'Down']).isRequired,
   /** Content of the tooltip, can be text or a component */
   text: PropTypes.element.isRequired,
   /** The element that the tooltip wrap, eg. icon or text. */

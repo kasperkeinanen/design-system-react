@@ -18,7 +18,7 @@ const Button = ({ children, type, disabled }) => {
     }
 }
 
-const ButtonBase = styled.button`
+export const ButtonBase = styled.button`
   font-family: inherit;
   margin: 10px;
   font-weight: ${props => props.theme.typography.semiBold};
