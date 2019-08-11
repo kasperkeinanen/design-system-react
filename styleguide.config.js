@@ -3,4 +3,14 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/ThemeWrapper.js')
   },
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Raleway&display=swap'
+        }
+      ]
+    }
+  },
 }

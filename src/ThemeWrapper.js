@@ -3,7 +3,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+    /* //@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap'); */
     font-family: 'Raleway', sans-serif;
   }
   h1 {
