@@ -9,6 +9,8 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build && rm -rf docs && mv styleguide docs",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
