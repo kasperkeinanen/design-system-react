@@ -109,13 +109,16 @@ Tooltip.propTypes = {
   /** Function to close the tooltip. */
   close: PropTypes.func.isRequired,
   /** The direction to align the tooltip. */
-  align: PropTypes.string.isRequired,
+  align: PropTypes.oneOf(['Right, Left, Up, Down']).isRequired,
   /** Content of the tooltip, can be text or a component */
   text: PropTypes.element.isRequired,
   /** The element that the tooltip wrap, eg. icon or text. */
   children: PropTypes.element.isRequired,
 }
+
+/** @component */
 export default Tooltip
+
 const Wrapper = styled.span`
   position: relative;
 `
