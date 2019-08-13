@@ -1,0 +1,6 @@
+docs/
+webpack.config.js
+.babelrc
+.eslintrc.json
+README.md
+styleguide.config.js
