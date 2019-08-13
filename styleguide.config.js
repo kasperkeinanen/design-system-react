@@ -8,6 +8,7 @@ module.exports = {
     {
       name: 'UI Components',
       components: 'src/components/**/*.jsx',
+      content: './README.md',
     },
     {},
   ],
