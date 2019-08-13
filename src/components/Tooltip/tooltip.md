@@ -20,7 +20,7 @@ class TooltipExample extends React.Component {
         <Tooltip
           isOpen={this.state.tooltipOpenRight}
           close={this.toggleOpen}
-          align="Right"
+          align="Up"
           text={
             <div>
             <h2>Example tooltip!</h2>

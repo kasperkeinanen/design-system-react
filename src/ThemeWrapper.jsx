@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -7,33 +8,33 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway', sans-serif;
   }
   h1 {
-    font-weight: ${props => props.theme.typography.semiBold};
+    font-weight: ${(props) => props.theme.typography.semiBold};
     font-size: 2.3em;
     line-height: 1.1em;
   }
   h2 {
-    font-weight: ${props => props.theme.typography.semiBold};
+    font-weight: ${(props) => props.theme.typography.semiBold};
     font-size: 1.8em;
     line-height: 1.2em;
   }
   h3 {
-    font-weight: ${props => props.theme.typography.bold};
+    font-weight: ${(props) => props.theme.typography.bold};
     font-size: 1.1em;
     line-height: 1.2em;
   }
   p {
-    font-weight: ${props => props.theme.typography.regular};
+    font-weight: ${(props) => props.theme.typography.regular};
     font-size: 1.2em;
     line-height: 1.4em;
   }
   a {
-    font-weight: ${props => props.theme.typography.semiBold};
+    font-weight: ${(props) => props.theme.typography.semiBold};
     font-size: 1.2em;
     line-height: 1.4em;
   }
-`
+`;
 
-const theme = {
+export const cscTheme = {
   pallet: {
     white: '#FFFFFF',
     black: '#000000',
@@ -112,19 +113,23 @@ const theme = {
     regular: '300',
     semiBold: '500',
     bold: '700',
-    extraBold: '900'
-  }
-}
+    extraBold: '900',
+  },
+};
 
-export default class ThemeWrapper extends Component {
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyle />
-          {this.props.children}
-        </>
-      </ThemeProvider>
-    )
-  }
-}
+const ThemeWrapper = ({
+  children,
+}) => (
+  <ThemeProvider theme={cscTheme}>
+    <>
+      <GlobalStyle />
+      {children}
+    </>
+  </ThemeProvider>
+);
+
+ThemeWrapper.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+export default ThemeWrapper;

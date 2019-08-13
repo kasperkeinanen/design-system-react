@@ -1,0 +1,34 @@
+{
+  "rules": {
+    "react/jsx-curly-newline": {
+      "multiline": "consistent",
+      "singleline": "consistent"
+    },
+    "react/state-in-constructor": ["enabled", "never"],
+    "react/static-property-placement": "disabled",
+    "react/jsx-props-no-spreading": [{
+      "html": "ignore",
+      "custom": "ignore"
+    }]
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["airbnb"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": [
+    "react",
+    "eslint-plugin-babel"
+  ]
+}
