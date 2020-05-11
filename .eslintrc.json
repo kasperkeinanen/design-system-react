@@ -1,9 +1,6 @@
 {
   "rules": {
-    "react/jsx-curly-newline": {
-      "multiline": "consistent",
-      "singleline": "consistent"
-    },
+    "react/jsx-curly-newline": 0,
     "react/state-in-constructor": ["enabled", "never"],
     "react/static-property-placement": "disabled",
     "react/jsx-props-no-spreading": [{
