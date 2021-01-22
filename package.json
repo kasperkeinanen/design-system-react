@@ -7,6 +7,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "styled-components": "^5.1.0"
@@ -42,6 +43,8 @@
   "scripts": {
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build && rm -rf docs && mv styleguide docs",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
